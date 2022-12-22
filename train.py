@@ -25,7 +25,7 @@ while not iter_counter.completed_training():
 
     with iter_counter.time_measurement("train"):
         losses = optimizer.train_one_step(cur_data, iter_counter.steps_so_far)
-        metric_tracker.update_metrics(losses, smoothe=True)
+        # metric_tracker.update_metrics(losses, smoothe=True)
 
     with iter_counter.time_measurement("maintenance"):
         if iter_counter.needs_printing():
